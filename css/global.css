@@ -1,13 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
-  --text-color: black;
-  --footer-back-color: #123412;
+  --text-color: #33ff22;
+  --footer-back-color: #010f01;
+  --background-color: #010f01;
   scroll-behavior: smooth;
   color: var(--text-color);
+  font-family: "Handjet", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", system-ui;
+  color: var(--text-color);
+}
+.body{
+  background-color: var(--background-color);
 }
 .container {
   max-width: 1200px;
