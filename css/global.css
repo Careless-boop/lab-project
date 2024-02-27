@@ -7,12 +7,32 @@
   box-sizing: border-box;
 }
 :root {
-  --text-color: #33ff22;
+  --main-text-color: #33ff22;
+  --body-text-color: #070707;
   --footer-back-color: #010f01;
   --background-color: #010f01;
+  --body-background-color: #a7a7a7;
+  --body-button-border-color: #838383;
+  --body-button-color: #8d8d8d;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --body-button-hover-color: #7e7e7e;
+  --body-logo-text-background-color: #969696;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;
+}
+img {
+  display: block;
+  margin: auto;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -21,12 +41,32 @@ h4,
 h5,
 h6 {
   font-family: "Press Start 2P", system-ui;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
-.body{
+.body {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+.main {
+  color: var(--main-text-color);
   background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 6px 7px var(--shadow-color);
 }
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
+}
+.index__logo-image {
+  margin: 0;
+  max-height: 64px;
+  max-width: 64px;
+}
+
+@media (max-width: 1630px) {
+  .container {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
