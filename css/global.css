@@ -9,7 +9,6 @@
 :root {
   --main-text-color: #33ff22;
   --body-text-color: #070707;
-  --footer-back-color: #010f01;
   --background-color: #010f01;
   --body-background-color: #a7a7a7;
   --body-button-border-color: #838383;
@@ -17,6 +16,9 @@
   --shadow-color: rgba(0, 0, 0, 0.5);
   --body-button-hover-color: #7e7e7e;
   --body-logo-text-background-color: #969696;
+  --about-us-elements-border-color: #33ff22;
+  --about-us-button-color: #053105;
+  --about-us-button-hover-color: #085e08;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;

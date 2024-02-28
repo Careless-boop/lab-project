@@ -1,1 +1,72 @@
+.about-us {
+  padding-bottom: 20px;
+}
+.about-us__description {
+  font-size: 20px;
+}
+.about-us__students {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about-us__students-prev-btn,
+.about-us__students-next-btn {
+  font-family: "Press Start 2P", system-ui;
+  border: 3px solid var(--about-us-elements-border-color);
+  border-radius: 23px;
+  max-width: fit-content;
+  height: 55px;
+  background-color: var(--about-us-button-color);
+  color: var(--main-text-color);
+}
+.about-us__students-prev-btn:hover,
+.about-us__students-next-btn:hover {
+  background-color: var(--about-us-button-hover-color);
+}
 
+.about-us__students-next-btn:active,
+.about-us__students-prev-btn:active{
+ background-color: var(--about-us-button-color);
+}
+.about-us__students-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.about-us__student {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.about-us__student-photo {
+  width: 470px;
+  height: 470px;
+  object-position: top;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--about-us-elements-border-color);
+  transition: all 0.3s ease;
+}
+.about-us__student-fullname {
+  border: 1px solid var(--about-us-elements-border-color);
+  border-top: none;
+  border-radius: 1px;
+}
+@media (max-width: 1090px) {
+  .about-us__student-photo {
+    width: 370px;
+    height: 370px;
+  }
+}
+@media (max-width: 500px) {
+  .about-us__student-photo {
+    width: 250px;
+    height: 250px;
+  }
+  .about-us__students-next-btn,
+  .about-us__students-prev-btn {
+    display: none;
+  }
+}
