@@ -4,12 +4,7 @@
 .about-us__description {
   font-size: 20px;
 }
-.about-us__students {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
+
 .about-us__students-prev-btn,
 .about-us__students-next-btn {
   font-family: "Press Start 2P", system-ui;
@@ -19,6 +14,8 @@
   height: 55px;
   background-color: var(--about-us-button-color);
   color: var(--main-text-color);
+  cursor: pointer;
+  transition: 0.3s;
 }
 .about-us__students-prev-btn:hover,
 .about-us__students-next-btn:hover {
@@ -26,19 +23,46 @@
 }
 
 .about-us__students-next-btn:active,
-.about-us__students-prev-btn:active{
- background-color: var(--about-us-button-color);
+.about-us__students-prev-btn:active {
+  background-color: var(--about-us-button-color);
+}
+.about-us__students {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 .about-us__students-carousel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease-in, width 0s;
+  width: 100%;
+}
+.about-us__students-carousel .about-us__students-list {
+  max-width: 1506px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in, width 0s;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.about-us__students-list::-webkit-scrollbar {
+  display: none;
 }
 .about-us__student {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 10px;
-  padding-bottom: 0px;
+  align-items: center;
 }
 .about-us__student-photo {
   width: 470px;
@@ -48,22 +72,67 @@
   border-radius: 10px;
   border: 2px solid var(--about-us-elements-border-color);
   transition: all 0.3s ease;
+  user-select: none;
 }
 .about-us__student-fullname {
   border: 1px solid var(--about-us-elements-border-color);
   border-top: none;
   border-radius: 1px;
+  font-family: "Handjet", sans-serif;
+  font-size: 28px;
+  width: 470px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1630px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 988px;
+  }
+  .about-us__students-carousel {
+    width: 90%;
+  }
+}
+@media (max-width: 1230px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 470px;
+  }
+  .about-us__students-carousel {
+    width: 80%;
+  }
 }
 @media (max-width: 1090px) {
   .about-us__student-photo {
     width: 370px;
     height: 370px;
   }
+  .about-us__student-fullname {
+    width: 370px;
+    font-size: 20px;
+  }
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 370px;
+  }
+  .about-us__students-carousel {
+    width: 70%;
+  }
+}
+@media (max-width: 680px) {
+  .about-us__students-carousel {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 250px;
+  }
+  .about-us__students-carousel {
+    justify-content: center;
+  }
   .about-us__student-photo {
     width: 250px;
     height: 250px;
+  }
+  .about-us__student-fullname {
+    width: 250px;
   }
   .about-us__students-next-btn,
   .about-us__students-prev-btn {
