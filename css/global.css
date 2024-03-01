@@ -28,6 +28,10 @@
   --contact-us-input-border-color: #33ff22;
   --contact-us-input-text-color: #33ff22;
   --contact-us-input-background-color: #070707;
+  --footer-usb-background-color: #070707;
+  --footer-usb-connector-border-top-color: #ffffff;
+  --footer-usb-connector-border-color: #070707;
+  --footer-list-item-boarder-color:#808080;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;
