@@ -19,6 +19,15 @@
   --about-us-elements-border-color: #33ff22;
   --about-us-button-color: #053105;
   --about-us-button-hover-color: #085e08;
+  --contact-us-button-color: #070707;
+  --contact-us-button-text-color: #33ff22;
+  --contact-us-button-border-color: #33ff22;
+  --contact-us-button-color-hover: #085e08;
+  --contact-us-input-placeholder-color: #119b11;
+  --contact-us-input-focus-color: #33ff22;
+  --contact-us-input-border-color: #33ff22;
+  --contact-us-input-text-color: #33ff22;
+  --contact-us-input-background-color: #070707;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;

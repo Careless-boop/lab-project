@@ -1,5 +1,42 @@
-.contact-us__form{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.contact-us__form input[type="text"],
+.contact-us__form input[type="email"],
+.contact-us__form textarea {
+  padding: 5px;
+  margin-bottom: 15px;
+  border: 2px solid var(--contact-us-input-border-color);
+  border-radius: 3px;
+  background-color: var(--contact-us-input-background-color);
+  color: var(--contact-us-input-text-color);
+  max-width: 100%;
+  font-family: "Handjet", sans-serif;
+  font-size: 16px;
+}
+.contact-us__form input[type="text"]::placeholder,
+.contact-us__form input[type="email"]::placeholder,
+.contact-us__form textarea::placeholder {
+  color: var(--contact-us-input-placeholder-color);
+}
+.contact-us__form input[type="text"]:focus,
+.contact-us__form input[type="email"]:focus,
+.contact-us__form textarea:focus {
+    outline: none; 
+}
+.contact-us__form input[type="submit"] {
+  background-color: var(--contact-us-button-color);
+  color: var(--contact-us-button-text-color);
+  padding: 10px 20px;
+  border: 2px solid var(--contact-us-button-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Handjet", sans-serif;
+}
+.contact-us__form input[type="submit"]:hover {
+  background-color: var(--contact-us-button-color-hover);
+  font-family: "Handjet", sans-serif;
 }
