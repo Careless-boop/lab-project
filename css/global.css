@@ -27,11 +27,14 @@
   --contact-us-input-focus-color: #33ff22;
   --contact-us-input-border-color: #33ff22;
   --contact-us-input-text-color: #33ff22;
+  --contact-us-input-textarea-scrollbar-tracker-color: #33ff22;
+  --contact-us-input-textarea-scrollbar-track-color: #085e08;
   --contact-us-input-background-color: #070707;
   --footer-usb-background-color: #070707;
   --footer-usb-connector-border-top-color: #ffffff;
   --footer-usb-connector-border-color: #070707;
   --footer-list-item-boarder-color:#808080;
+  --footer-unnecesary-information-text-color:#ffffff;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;

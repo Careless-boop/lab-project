@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: start;
 }
+.contact-us__input-name{
+  font-size: 28px;
+}
 .contact-us__form input[type="text"],
 .contact-us__form input[type="email"],
 .contact-us__form textarea {
@@ -14,7 +17,10 @@
   color: var(--contact-us-input-text-color);
   max-width: 100%;
   font-family: "Handjet", sans-serif;
-  font-size: 16px;
+  font-size: 28px;
+}
+.contact-us__form textarea {
+  scrollbar-color: var(--contact-us-input-textarea-scrollbar-tracker-color) var(--contact-us-input-textarea-scrollbar-track-color);
 }
 .contact-us__form input[type="text"]::placeholder,
 .contact-us__form input[type="email"]::placeholder,
@@ -35,8 +41,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Handjet", sans-serif;
+  font-size: 28px;
 }
 .contact-us__form input[type="submit"]:hover {
   background-color: var(--contact-us-button-color-hover);
   font-family: "Handjet", sans-serif;
+}
+@media (max-width: 1090px) {
+  .contact-us__input-name,
+  .contact-us__form input[type="submit"],
+  .contact-us__form input[type="text"],
+  .contact-us__form input[type="email"],
+  .contact-us__form textarea {
+    font-size: 20px;
+  }
 }

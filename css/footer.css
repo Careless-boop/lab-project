@@ -18,6 +18,13 @@
 }
 .footer__unnecesary-information-text{
     white-space: pre-line;
+    color: var(--footer-unnecesary-information-text-color);
+}
+.footer__unnecesary-information-background{
+    background-image: url('/img/footer-matrix.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2px;
 }
 .footer__usb-connector{
     width: 50px;
