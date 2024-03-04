@@ -1,9 +1,10 @@
 .footer__nav{
+    padding: 5px;
     border-bottom: solid;
     border-radius: 30px;
 }
 .footer__list{
-    margin-left: 35px;
+    margin-left: 26px;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -17,4 +18,41 @@
 }
 .footer__unnecesary-information-text{
     white-space: pre-line;
+    color: var(--footer-unnecesary-information-text-color);
+}
+.footer__unnecesary-information-background{
+    background-image: url('/img/footer-matrix.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+}
+.footer__usb-connector{
+    width: 50px;
+    height: 20px;
+    background-color: var(--footer-usb-background-color);
+    border-top: 7px solid var(--footer-usb-connector-border-top-color);
+    border-radius: 10%;
+}
+.footer__usb-connector-border{
+    width: 60px;
+    height: 30px;
+    border: 5px solid var(--footer-usb-connector-border-color);
+    border-radius: 20%;
+}
+.footer__list-item{
+    padding: 3px;
+    border: 2px solid var(--footer-list-item-boarder-color);
+    border-radius: 20%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.footer__list-link{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
