@@ -1,9 +1,7 @@
 const prevButton = document.querySelector(".about-us__students-prev-btn");
 const nextButton = document.querySelector(".about-us__students-next-btn");
 const studentsCarousel = document.querySelector(".about-us__students-list");
-const studentsIndicators = document.querySelector(
-  ".about-us__students-indicators"
-);
+
 const studentsList = [
   {
     img: "halushka.jpeg",
@@ -29,8 +27,6 @@ const studentsList = [
 
 initializeList(studentsList, studentsCarousel);
 
-initializeIndicators();
-
 prevButton.addEventListener("click", () => {
   let itemWidth = document.querySelector(".about-us__student").clientWidth;
   console.log(itemWidth);
@@ -41,6 +37,38 @@ nextButton.addEventListener("click", () => {
   console.log(itemWidth);
   studentsCarousel.scrollLeft += itemWidth;
 });
+
+const slides = document.querySelectorAll(".about-us__student");
+const indicators = document.querySelectorAll(".about-us__students-indicator");
+
+const options = {
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const index = Array.from(slides).indexOf(entry.target);
+      activateSlide(index);
+      console.log("triggered");
+    }
+  });
+}, options);
+
+slides.forEach((slide) => {
+  observer.observe(slide);
+});
+
+function activateSlide(index) {
+  resetIndicators();
+  indicators[index].classList.add("active");
+}
+
+function resetIndicators() {
+  indicators.forEach((indicator) => {
+    indicator.classList.remove("active");
+  });
+}
 
 function initializeList(students, carousel) {
   const indicators = document.querySelector(".about-us__students-indicators");
@@ -59,23 +87,4 @@ function initializeList(students, carousel) {
   });
   carousel.innerHTML = studentsTemp;
   indicators.innerHTML = indicatorsTemp;
-}
-function resetIndicators(indicators) {
-  indicators.forEach((indicator) => {
-    indicator.classList.remove("active");
-  });
-}
-function initializeIndicators() {
-  const indicators = document.querySelectorAll(".about-us__students-indicator");
-  activateIndicator(indicators);
-  studentsCarousel.addEventListener("scroll", () => {
-    resetIndicators(indicators);
-    activateIndicator(indicators);
-  });
-}
-function activateIndicator(indicators) {
-  const itemWidth = document.querySelector(".about-us__student").clientWidth;
-  const fullItemWidth = itemWidth + 48; /*48 is a column gap*/
-  const slideIndex = Math.floor(studentsCarousel.scrollLeft / fullItemWidth);
-  indicators[slideIndex].classList.add("active");
 }
