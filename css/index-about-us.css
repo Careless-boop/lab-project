@@ -1,0 +1,178 @@
+.about-us {
+  padding-bottom: 20px;
+}
+.about-us__description {
+  font-size: 20px;
+}
+
+.about-us__students-prev-btn,
+.about-us__students-next-btn {
+  font-family: "Press Start 2P", system-ui;
+  border: 3px solid var(--about-us-elements-border-color);
+  border-radius: 23px;
+  max-width: fit-content;
+  height: 55px;
+  background-color: var(--about-us-button-color);
+  color: var(--main-text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about-us__students-prev-btn:hover,
+.about-us__students-next-btn:hover {
+  background-color: var(--about-us-button-hover-color);
+}
+
+.about-us__students-next-btn:active,
+.about-us__students-prev-btn:active {
+  background-color: var(--about-us-button-color);
+}
+.about-us__students {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.about-us__students-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease-in, width 0s;
+  width: 100%;
+}
+.about-us__students-carousel .about-us__students-list {
+  max-width: 1506px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in, width 0s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+.about-us__students-list::-webkit-scrollbar {
+  display: none;
+}
+.about-us__student {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.about-us__student-photo {
+  width: 470px;
+  height: 470px;
+  object-position: top;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--about-us-elements-border-color);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+.about-us__student-fullname {
+  border: 1px solid var(--about-us-elements-border-color);
+  border-top: none;
+  border-radius: 1px;
+  font-family: "Handjet", sans-serif;
+  font-size: 28px;
+  width: 470px;
+  transition: all 0.3s ease;
+}
+.about-us__students-indicators {
+  list-style: none;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+.about-us__students-indicator {
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--about-us-indicator-color);
+  margin: 6px;
+  transition: all 0.2s ease;
+}
+.active {
+  border: 2px solid var(--about-us-elements-border-color);
+}
+.about-us__more {
+  text-align: center;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+.about-us__more-button {
+  box-sizing: border-box;
+  border: 2px solid var(--about-us-elements-border-color);
+  border-radius: 15px;
+  padding: 10px 15px 10px 15px;
+  background-color: var(--about-us-button-color);
+  transition: all 0.3s ease;
+}
+.about-us__more-button:hover {
+  background-color: var(--about-us-button-hover-color);
+}
+@media (max-width: 1630px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 988px;
+  }
+  .about-us__students-carousel {
+    width: 90%;
+  }
+}
+@media (max-width: 1230px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 470px;
+  }
+  .about-us__students-carousel {
+    width: 80%;
+  }
+}
+@media (max-width: 1090px) {
+  .about-us__student-photo {
+    width: 370px;
+    height: 370px;
+  }
+  .about-us__student-fullname {
+    width: 370px;
+    font-size: 20px;
+  }
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 370px;
+  }
+  .about-us__students-carousel {
+    width: 70%;
+  }
+}
+@media (max-width: 680px) {
+  .about-us__students-carousel {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .about-us__students-carousel .about-us__students-list {
+    max-width: 250px;
+  }
+  .about-us__students-carousel {
+    justify-content: center;
+  }
+  .about-us__student-photo {
+    width: 250px;
+    height: 250px;
+  }
+  .about-us__student-fullname {
+    width: 250px;
+  }
+  .about-us__students-next-btn,
+  .about-us__students-prev-btn {
+    display: none;
+  }
+  .about-us__students-indicators {
+    display: flex;
+  }
+}
