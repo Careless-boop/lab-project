@@ -1,29 +1,7 @@
+import { studentsList } from "./student-list.js";
 const prevButton = document.querySelector(".about-us__students-prev-btn");
 const nextButton = document.querySelector(".about-us__students-next-btn");
 const studentsCarousel = document.querySelector(".about-us__students-list");
-
-const studentsList = [
-  {
-    img: "halushka.jpeg",
-    fullname: "Halushka Viktor",
-    alt: "halushka photo",
-  },
-  {
-    img: "mavrodi.jpg",
-    fullname: "Mavrodi Volodymyr",
-    alt: "mavrodi photo",
-  },
-  {
-    img: "ignatenko.jpg",
-    fullname: "Ignatenko Veronika",
-    alt: "ignatenko photo",
-  },
-  {
-    img: "maruda.png",
-    fullname: "Maruda Maksym",
-    alt: "maruda photo",
-  },
-];
 
 initializeList(studentsList, studentsCarousel);
 
@@ -79,7 +57,7 @@ function initializeList(students, carousel) {
     <img
       class="about-us__student-photo"
       src="img/${student.img}"
-      alt="${student.alt}"
+      alt="Photo of ${student.fullname}"
     />
     <h3 class="about-us__student-fullname">${student.fullname}</h3>
   </div>`;
