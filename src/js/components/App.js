@@ -55,7 +55,7 @@ function App() {
         </div>
         <img
           className="merch__cart-button"
-          src="../../../img/cart-icon.png"
+          src="img/cart-icon.png"
           alt="Cart icon"
           onClick={() => togglePopup()}
         ></img>

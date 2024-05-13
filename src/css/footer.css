@@ -21,7 +21,7 @@
     color: var(--footer-unnecesary-information-text-color);
 }
 .footer__unnecesary-information-background{
-    background-image: url('/img/footer-matrix.gif');
+    background-image: url('../../img/footer-matrix.gif');
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 2px;

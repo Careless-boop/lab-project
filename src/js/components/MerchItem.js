@@ -10,7 +10,7 @@ function MerchItem({ item, addToCart }) {
   return (
     <div className="merch-item">
       <img
-        src={"../../../img/" + item.img}
+        src={"img/" + item.img}
         className="merch-item__img"
         alt={item.name}
       ></img>
