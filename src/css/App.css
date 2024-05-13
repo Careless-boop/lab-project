@@ -1,0 +1,23 @@
+.merch__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.merch__cart-button {
+  width: 50px;
+  border: 2px solid var(--merch-cart-button-color);
+  border-radius: 15px;
+  padding: 5px;
+  object-position: -2px 0px;
+  margin: 15px;
+  background-color: rgba(51, 255, 34, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.merch__cart-button:hover{
+  background-color: rgba(51, 255, 34, 0);
+}
+.no-scroll{
+  overflow: hidden;
+}

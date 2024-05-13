@@ -36,6 +36,8 @@
   --footer-usb-connector-border-color: #070707;
   --footer-list-item-boarder-color:#808080;
   --footer-unnecesary-information-text-color:#ffffff;
+  --merch-item-border-color: #33ff22;
+  --merch-cart-button-color: #33ff22;
   scroll-behavior: smooth;
   color: var(--text-color);
   font-family: "Handjet", sans-serif;

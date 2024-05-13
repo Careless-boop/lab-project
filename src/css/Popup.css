@@ -1,0 +1,63 @@
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 50px;
+  background-color: var(--background-color);
+  border: 1px solid var(--merch-cart-button-color);
+  border-radius: 5px;
+  padding: 5px;
+}
+.popup-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.popup-content__header {
+  padding: 10px;
+}
+.popup__close {
+  font-size: 2rem;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.popup__summary {
+  padding: 30px;
+  font-size: 2rem;
+}
+.popup__items {
+  overflow-y: scroll;
+  max-height: 450px;
+  scrollbar-color: rgb(5, 234, 25) rgb(2, 36, 2);
+  list-style: none;
+}
+.popup__item-header {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.popup__item-remove{
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--merch-cart-button-color);
+  border: 1px solid var(--merch-cart-button-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  width: 36px;
+}
+.popup__item-remove:hover{
+  background-color: rgba(255, 255, 255, 0);
+}
+@media (max-width: 768px) {
+  .popup {
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .popup__summary {
+    font-size: 1.4rem;
+  }
+}
