@@ -21,6 +21,7 @@
   object-fit: cover;
   object-position: top;
   margin: 0;
+  user-select: none;
 }
 .student__name{
   margin-bottom: 8px;

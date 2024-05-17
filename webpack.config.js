@@ -18,5 +18,5 @@ module.exports = {
       },
     ],
   },
-  watch: true, // Enable watch mode
+  watch: true,
 };

@@ -32,8 +32,8 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  function addToCart(item){
-    setCart([...cart,item]);
+  function addToCart(item) {
+    setCart([...cart, item]);
   }
 
   function togglePopup() {
@@ -41,9 +41,9 @@ function App() {
     setShowPopup(!showPopup);
     document.body.classList.toggle("no-scroll");
   }
-  function deleteItemFromCart(index){
+  function deleteItemFromCart(index) {
     const temp = [...cart];
-    temp.splice(index,1)
+    temp.splice(index, 1);
     setCart(temp);
   }
   return (
@@ -53,15 +53,26 @@ function App() {
           <h2>Our Merch</h2>
           <p>Feel free to buy some</p>
         </div>
-        <img
-          className="merch__cart-button"
-          src="img/cart-icon.png"
-          alt="Cart icon"
-          onClick={() => togglePopup()}
-        ></img>
+        <div className="merch__cart-container">
+          <img
+            className="merch__cart-button"
+            src="img/cart-icon.png"
+            alt="Cart icon"
+            onClick={() => togglePopup()}
+          ></img>
+          <div className="merch__cart-count">{cart.length}</div>
+        </div>
       </div>
-      {showPopup ? <Popup togglePopup={togglePopup} cartList={cart} removeFromCart={deleteItemFromCart}/> : ""}
-      <MerchList addToCart={addToCart}/>
+      {showPopup ? (
+        <Popup
+          togglePopup={togglePopup}
+          cartList={cart}
+          removeFromCart={deleteItemFromCart}
+        />
+      ) : (
+        ""
+      )}
+      <MerchList addToCart={addToCart} />
     </div>
   );
 }
