@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
 import MerchList from "./MerchList";
 import Popup from "./Popup";
+import axios from "axios";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [cart, setCart] = useState([]);
+  const [merchList,setMerchList] = useState([]);
 
-  const initialMerch = [
-    { id: 1, name: "White TA-12 t-shirt", price: 69, img: "white-t-shirt.png" },
-    { id: 2, name: "Black TA-12 t-shirt", price: 33, img: "black-t-shirt.png" },
-    { id: 3, name: "White TA-12 hoodie", price: 1488, img: "white-hoodie.png" },
-    { id: 4, name: "Black TA-12 hoodie", price: 1939, img: "black-hoodie.png" },
-  ];
-  if (!localStorage.getItem("merch")) {
-    localStorage.setItem("merch", JSON.stringify(initialMerch));
-  }
+  useEffect(() => {
+    axios
+      .get("http://localhost:8008/merch")
+      .then((response) => {
+        const merchData = response.data;
+        setMerchList(merchData);
+        localStorage.setItem("merch", JSON.stringify(merchData));
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   useEffect(() => {
     const cartList = JSON.parse(localStorage.getItem("cart"));
-    console.log("1.1 Effect");
     console.log(cartList);
     if (cartList) {
-      console.log("1.2 Effect");
       setCart(cartList);
     }
   }, []);
 
   useEffect(() => {
-    console.log("2 Effect");
     console.log(JSON.stringify(cart));
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -72,7 +72,7 @@ function App() {
       ) : (
         ""
       )}
-      <MerchList addToCart={addToCart} />
+      <MerchList merchList={merchList} addToCart={addToCart} />
     </div>
   );
 }

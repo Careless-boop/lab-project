@@ -1,18 +1,12 @@
 import React from "react";
 import MerchItem from "./MerchItem";
 
-function MerchList({addToCart}) {
-  const merchList = JSON.parse(localStorage.getItem("merch"));
-
+function MerchList({ merchList, addToCart }) {
   return (
     <div>
       <ul>
-        {merchList.map((item) => (
-          <MerchItem
-            key={item.id}
-            item={item}
-            addToCart={addToCart}
-          />
+        {merchList.map((item,index) => (
+          <MerchItem key={index} item={item} addToCart={addToCart} />
         ))}
       </ul>
     </div>
